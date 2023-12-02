@@ -1,0 +1,1130 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80vw; /* Use viewport width instead of a percentage */
+    margin: 60px auto 0; /* Added top margin to accommodate the fixed navbar */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+
+
+
+/*________________________________________________________________*/
+
+
+
+
+
+
+
+.navbar {
+    background-color: rgba(0, 0, 50, 0.9); /* Dark matte blue background */
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: background-color 0.5s;
+}
+
+.navbar h1, .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    transition: color 0.3s;
+}
+
+.navbar a.dropdown:after {
+    content: ' ▼';
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Set a higher z-index for the dropdown content */
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .deep-dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+    z-index: 4; /* Set a higher z-index for the deep dropdown */
+}
+
+.navbar .dropdown-content:hover .deep-dropdown {
+    display: block;
+}
+
+
+.navbar .dropdown-content a {
+    display: block;
+    padding: 0.5em 1em;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    color: #206aba !important; /* Use !important to ensure the hover color is applied */
+}
+
+/* Add these styles for the additional dropdowns */
+
+.navbar .dropdown-content a:hover,
+.navbar .deep-dropdown a:hover {
+    background-color: #008080;
+    color: #206aba !important; /* Use !important to ensure the hover color is applied */
+}
+
+.navbar .dropdown-content a:hover {
+    background-color: #014082;
+    color: #206aba;
+}
+
+.navbar .deep-dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+}
+
+.navbar .dropdown-content:hover .deep-dropdown {
+    display: block;
+}
+
+.navbar .deep-dropdown a {
+    background-color: #014082;
+    display: block;
+    padding: 0.5em 1em;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .deep-dropdown a:hover {
+    background-color: #014082;
+    color: #206aba;
+}
+
+.get-started {
+    background-color: #add8e6;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+}
+
+.get-started a {
+    text-decoration: none;
+    color: #000;
+}
+
+.get-started:hover {
+    background-color: #87ceeb;
+}
+
+footer {
+    background-color: rgba(0, 0, 50, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+
+
+
+/*________________________________________________________________*/
+
+
+
+
+
+
+
+/* Existing styles for the navbar and other elements */
+
+.first-section {
+    background-color: #206aba;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 60px; /* Adjust this value to match your navbar height */
+    height: 70vh; /* Make the section cover the full height of the viewport */
+}
+
+.container {
+    width: 100%; /* Make the container cover the full width of the viewport */
+    margin: 60px auto 0; /* Added top margin to accommodate the fixed navbar */
+}
+
+
+.left-content {
+    flex: 1;
+    color: #fff;
+}
+
+.left-content h1 {
+    font-size: 4em; /* Adjust the size as needed */
+    margin: 0;
+}
+
+.subtext {
+    color: #d3d3d3; /* Greyish white */
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+}
+
+.get-started {
+    background-color: #add8e6;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.get-started a {
+    text-decoration: none;
+    color: #000;
+}
+
+.watch-video {
+    display: flex;
+    align-items: center;
+}
+
+.play-button {
+    width: 30px;
+    height: 30px;
+    background-color: #add8e6;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.watch-video span {
+    color: #fff;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 50, 0.9); /* Dark matte blue background */
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3; /* Set a higher z-index for the navbar */
+    transition: background-color 0.5s;
+}
+
+.right-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative; /* Set position to relative for z-index to work */
+    z-index: 2; /* Set a lower z-index for the right content */
+}
+
+.right-content img {
+    width: 100%; /* Make the image take up the entire width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    animation: hoverAnimation 2s infinite alternate ease-in-out; /* Hover animation */
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: translateY(-10px); /* Adjust the distance and direction as needed */
+    }
+    100% {
+        transform: translateY(10px); /* Adjust the distance and direction as needed */
+    }
+}
+
+
+
+
+
+/*________________________________________________________________*/
+
+
+
+
+
+
+
+.client-list {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.client-list img {
+    width: 100px; /* Adjust the width of the client images as needed */
+    height: auto;
+    margin-right: 20px; /* Adjust the spacing between client images */
+    filter: grayscale(100%); /* Convert images to greyscale */
+}
+
+
+
+
+
+/*________________________________________________________________*/
+
+
+
+
+
+
+
+.about-section {
+    padding: 40px 20px; /* Adjust padding as needed */
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the start of the container */
+}
+
+.left-half,
+.right-half {
+    flex: 1;
+}
+
+.left-half {
+    margin-right: 20px; /* Add some margin between the halves */
+}
+
+.right-half {
+    max-width: 400px; /* Adjust max-width as needed */
+}
+
+.right-half p {
+    margin-bottom: 20px; /* Add margin to the paragraph */
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #206aba;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: #014082; /* Change the color on hover */
+}
+
+
+
+
+
+/*________________________________________________________________*/
+
+
+
+
+
+
+
+.next-section {
+    background-color: white; /* Very light grey background */
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-half {
+    flex: 1;
+    text-align: left;
+}
+
+.left-half h3 {
+    font-size: 2.5em;
+}
+
+.left-half p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.grey-text {
+    color: #808080; /* Grey color for additional text */
+}
+
+.right-half {
+    flex: 1;
+    text-align: right;
+}
+
+.right-half img {
+    max-width: 100%; /* Set max-width to control the size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+/*________________________________________________________________*/
+
+
+
+
+
+
+
+.services-section {
+    background-color: #f4f4f4; /* Light grey background */
+    padding: 40px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 2em;
+    color: #333; /* Dark grey text color */
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service-item {
+    width: 350px;
+    height: 350px;
+    background-color: #fff; /* White background for the squares */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center;
+}
+
+.service-item h3 {
+    color: #333; /* Dark grey text color */
+}
+
+.service-item p {
+    color: #666; /* Grey text color */
+}
+
+
+
+
+
+/*________________________________________________________________*/
+
+
+
+
+
+
+
+.portfolio-section {
+    background-color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.section-heading h2 {
+    font-size: 3em;
+    color: #333; /* Dark grey text color */
+}
+
+.portfolio-buttons {
+    margin-top: 20px;
+}
+
+.portfolio-buttons button {
+    background-color: #add8e6; /* Light blue background */
+    color: #fff; /* White text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; /* Capsule shape */
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.portfolio-buttons button.active {
+    background-color: #206aba; /* Dark blue background for the active button */
+}
+
+.portfolio-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.portfolio-images img {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    /* Add other styles as needed */
+}
+
+
+
+
+
+/*________________________________________________________________*/
+
+
+
+
+
+
+
+
+.team-section {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.team-section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-card {
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.team-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.team-info {
+    flex: 1;
+}
+
+.team-info h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.designation {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.horizontal-line {
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.social-icon {
+    font-size: 1.5em;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #206aba;
+}
+
+
+
+
+
+/*________________________________________________________________*/
+
+
+
+
+
+
+
+.pricing-section {
+    background-color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.pricing-section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.pricing-text {
+    margin-bottom: 40px;
+}
+
+.pricing-plans {
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-plan {
+    width: 250px;
+    margin: 0 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.pricing-plan:hover {
+    transform: translateY(-5px);
+}
+
+.plan-heading {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.plan-price {
+    font-size: 2em;
+    color: #206aba;
+    margin-bottom: 20px;
+}
+
+.plan-features {
+    text-align: left;
+}
+
+.feature-item {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.get-started-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #206aba;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.get-started-button:hover {
+    background-color: #fff;
+    color: #206aba;
+}
+
+
+
+
+
+/*________________________________________________________________*/
+
+
+
+
+
+
+
+.contact-section {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item h4 {
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.form-submit {
+    background-color: #206aba;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: #004080;
+}
+
+
+
+
+
+/*________________________________________________________________*/
+
+
+
+
+
+
+
+.faq-section {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-heading {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+}
+
+.faq-question {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.faq-answer {
+    padding: 15px;
+    display: none;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+.faq-question::after {
+    content: '\25BC'; /* Unicode character for downward arrow */
+    position: absolute;
+    right: 15px;
+    font-size: 1.5em;
+}
+
+
+
+
+
+/*________________________________________________________________*/
+
+
+
+
+
+
+
+.join-section {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.join-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.join-heading {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.join-text {
+    margin-bottom: 30px;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.input-bar {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.subscribe-button {
+    background-color: #206aba;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+    background-color: #014082;
+}
+
+
+
+
+
+/*________________________________________________________________*/
+
+
+
+
+
+
+
+.final-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f4f4f4;
+    padding: 40px 0;
+}
+
+.final-part {
+    flex: 1;
+    text-align: center;
+}
+
+.big-text {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.small-text {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.useful-links {
+    margin-bottom: 20px;
+}
+
+.useful-links a {
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.useful-links a:hover {
+    color: #206aba;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services-list li {
+    text-align: left;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.services-list li::before {
+    content: '\2192';
+    position: absolute;
+    left: 0;
+    color: #206aba;
+}
+
+.social-networks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-networks a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-networks a:hover {
+    color: #206aba;
+}
+
+
+
+
+
+
+
+/* Add this CSS in your style.css file */
+
+/* General styling for larger screens */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Navigation Bar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; 
+    }
+
+    .container {
+        width: 90%; 
+    }
+
+    /* Responsive navigation bar */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        max-height: none;
+        overflow: visible;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .deep-dropdown-content {
+        position: static;
+        display: none;
+        max-height: none;
+        overflow: visible;
+    }
+
+    /* Styles for smaller screens */
+    .first-section {
+        flex-direction: column;
+    }
+
+    .right-content {
+        margin-top: 20px;
+    }
+
+    .client-list img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-section .about-content {
+        flex-direction: column;
+    }
+
+    .next-section {
+        flex-direction: column;
+    }
+
+    .right-half img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .services-section .services-container {
+        flex-direction: column;
+    }
+
+    .service-item {
+        margin-bottom: 20px;
+    }
+
+    .portfolio-buttons {
+        flex-direction: column;
+    }
+
+    .portfolio-images img {
+        width: 100%;
+        height: auto;
+    }
+
+    .team-section .team-member {
+        flex-direction: column;
+    }
+
+    .pricing-section .pricing-plans {
+        flex-direction: column;
+    }
+
+    .pricing-plan {
+        margin-bottom: 20px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .faq-item {
+        margin-bottom: 20px;
+    }
+
+    .join-text {
+        text-align: center;
+    }
+
+    .final-section {
+        flex-direction: column;
+    }
+
+    .services-list {
+        text-align: center;
+    }
+
+    .social-networks {
+        justify-content: center;
+    }
+
+}
