@@ -34,7 +34,7 @@ header h1 {
 
 
 .navbar {
-    background-color: rgba(0, 0, 50, 0.9); /* Dark matte blue background */
+    background-color: rgba(0, 0, 50, 0.9);
     color: #fff;
     padding: 10px;
     display: flex;
@@ -46,13 +46,26 @@ header h1 {
     transition: background-color 0.5s;
 }
 
-.navbar h1, .navbar a {
+.navbar .logo {
+    margin: 0;
+}
+
+.navbar .navbar-items {
+    display: flex;
+    align-items: center;
+}
+
+.navbar h1,
+.navbar a {
     color: #fff;
     text-decoration: none;
     padding: 0.5em 1em;
     margin: 0 0.5em;
     transition: color 0.3s;
 }
+
+/* ... existing styles ... */
+
 
 .navbar a.dropdown:after {
     content: ' ▼';
